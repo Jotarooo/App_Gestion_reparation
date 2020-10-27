@@ -21,7 +21,7 @@ using System.Windows.Shapes;
 namespace App_Gestion_reparation
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml blandine
+    /// Interaction logic for MainWindow.xaml blandine14
     /// </summary>
     public partial class MainWindow : Window
     {
