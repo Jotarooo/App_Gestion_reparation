@@ -1,0 +1,17 @@
+﻿<Window x:Class="App_Gestion_reparation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App_Gestion_reparation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="415.649" Width="800">
+    <Grid Margin="0,0,3.6,5.4">
+        <DataGrid x:Name="reparerPhone" HorizontalAlignment="Left" Height="207" Margin="10,10,0,0" VerticalAlignment="Top" Width="770" RenderTransformOrigin="0.488,0.557" CanUserAddRows="False" SelectionChanged="DataGrid_SelectionChanged" MouseDoubleClick="reparerPhone_MouseDoubleClick" />
+        <Button Content="Ajouter client" HorizontalAlignment="Left" Margin="686,312,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click_1"/>
+        <Button x:Name="modifierClient" Content="Modifier client" HorizontalAlignment="Left" Margin="379,312,0,0" VerticalAlignment="Top" Width="99" />
+        <Button x:Name="aPropos" Content="A propos" HorizontalAlignment="Left" Margin="10,312,0,0" VerticalAlignment="Top" Width="78" Click="aPropos_Click" />
+        <Button x:Name="sauvegarder" Content="sauvegarder les modifications" HorizontalAlignment="Left" Margin="499,312,0,0" VerticalAlignment="Top" Width="169" Click="sauvegarder_Click"/>
+        <Button x:Name="ouvrir" Content="Ouvrir" HorizontalAlignment="Left" Margin="274,312,0,0" VerticalAlignment="Top" Width="78" Click="ouvrir_Click" />
+    </Grid>
+</Window>
