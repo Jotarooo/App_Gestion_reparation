@@ -86,6 +86,9 @@ namespace App_Gestion_reparation
 
             Saisie modifierclient = new Saisie(item);
             modifierclient.Show();
+
+
+            
         }
 
     }
