@@ -79,9 +79,6 @@
     <Compile Include="UI\APropos.xaml.cs">
       <DependentUpon>APropos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\modifierclient.xaml.cs">
-      <DependentUpon>modifierclient.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UI\Saisie.xaml.cs">
       <DependentUpon>Saisie.xaml</DependentUpon>
     </Compile>
@@ -98,10 +95,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UI\APropos.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UI\modifierclient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -128,6 +121,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

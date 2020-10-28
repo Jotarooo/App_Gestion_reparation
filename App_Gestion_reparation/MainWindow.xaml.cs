@@ -62,18 +62,6 @@ namespace App_Gestion_reparation
             saisie.ShowDialog();
         }
 
-        private void ModifierClient ()
-        {
-           //double click sur la data grid et une fenetre s'ouvre et il y a des fichiers pré-créé et on peut les modifier et les enregistrer.
-                //action double click sur la datagrid pour ouvrir une fenetre
-
-
-
-           //quand on enregistre il faut un boutton pour enregistrer les nouvelles données et un boutton quitter.
-
-           //et il faut que la liste modifiée s'affiche dans la datagrid actuelle
-        }
-
         private void aPropos_Click(object sender, RoutedEventArgs e)
         {
             APropos aPropos = new APropos();
@@ -90,26 +78,16 @@ namespace App_Gestion_reparation
            // OpenFile();
         }
 
-        private void reparerPhone_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        public void reparerPhone_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
             ReparationPhone item = reparerPhone.SelectedItem as ReparationPhone;
             //afficher le client dans les textbox de saisie
             
 
-            Saisie modifierclient = new Saisie();
+            Saisie modifierclient = new Saisie(item);
             modifierclient.Show();
-
-
-            
         }
 
-        public Button modifier(object sender, RoutedEventArgs e)
-        {
-
-            int tailleliste = Business.ReparationPhones.Count();
-
-        }
     }
     
 }
