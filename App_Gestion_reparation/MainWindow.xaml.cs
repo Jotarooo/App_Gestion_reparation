@@ -30,15 +30,8 @@ namespace App_Gestion_reparation
         public MainWindow()
         {
             InitializeComponent();
-            ReparationPhone Annie = new ReparationPhone("Pomme", "Annie", "Samsung", "87666666", "anniepomme@mail.com", DateTime.Today, "Chalala", "En cours", "20000");
-            ReparationPhone Emma = new ReparationPhone("Digue", "Emma", "Huawei", "89364878", "emmadigue@mail.com", DateTime.Today, "Chalala", "Livraison", "10000");
-            ReparationPhone George = new ReparationPhone("Doupe", "George", "Iphone", "87215689", "georgedoupe@mail.com", DateTime.Today, "Chalala", "Endommagé...", "0");
 
-            ObservableCollection<ReparationPhone> reparationPhones = new ObservableCollection<ReparationPhone>();
-            reparationPhones.Add(Annie);
-            reparationPhones.Add(Emma);
-            reparationPhones.Add(George);
-
+            ReparationPhoneAccess.GetAllReparation();
             reparerPhone.ItemsSource = Business.ReparationPhones;
 
         }

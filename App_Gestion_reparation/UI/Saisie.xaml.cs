@@ -46,7 +46,7 @@ namespace App_Gestion_reparation.UI
             if(EditMode == true)
             {
 
-            this.reparationPhone = new ReparationPhone(nom.Text, prenom.Text, modeleTelephone.Text, vini.Text, email.Text, DateTime.Today, description.Text, status.Text, prix.Text);
+            this.reparationPhone = new ReparationPhone(nom.Text, prenom.Text, modeleTelephone.Text, vini.Text, email.Text, description.Text, status.Text, prix.Text);
 
             }
             this.reparationPhone = phone;
@@ -58,8 +58,10 @@ namespace App_Gestion_reparation.UI
         {
             if(EditMode == false)
             {
-            this.reparationPhone = new ReparationPhone(nom.Text,prenom.Text,modeleTelephone.Text,vini.Text,email.Text,DateTime.Today,description.Text,status.Text,prix.Text);
-            Business.ReparationPhones.Add(reparationPhone);
+                
+                this.reparationPhone = new ReparationPhone(nom.Text,prenom.Text,modeleTelephone.Text,vini.Text,email.Text, description.Text,status.Text,prix.Text);
+                ReparationPhoneAccess.InsertReparation(reparationPhone);
+                Business.ReparationPhones.Add(reparationPhone);
             }
         }
 
