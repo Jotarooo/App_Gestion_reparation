@@ -1,10 +1,23 @@
-﻿using System;
+﻿using App_Gestion_reparation.Metier;
+using System;
 
 namespace App_Gestion_reparation
 {
-    public class ReparationPhone
+    public class ReparationPhone : BindableBase
     {
-        public string Nom { get; set; }
+        public int Id { get; set; }
+        private string nom;
+        public string Nom
+        {
+            get
+            {
+                return this.nom;
+            }
+            set {
+                SetProperty(ref this.nom, value);
+            }
+        }
+ 
         public string Prenom { get; set; }
         public string ModelPhone {get;set;}
         public string Mobil { get; set; }
@@ -27,10 +40,6 @@ namespace App_Gestion_reparation
             this.Description = Description;
             this.Status = Status;
             this.PrixReparation = PrixReparation;
-        }
-
-        public ReparationPhone()
-        {
-        }
+        }               
     }
 }

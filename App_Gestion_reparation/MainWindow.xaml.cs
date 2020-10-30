@@ -66,10 +66,6 @@ namespace App_Gestion_reparation
             Business.SaveFile(Business.ReparationPhones);
         }
 
-        private void ouvrir_Click(object sender, RoutedEventArgs e)//pas encore fait pcq je veux pas imorter la liste mais plutot ouvrir l'appli et la liste est là.
-        {
-           // OpenFile();
-        }
 
         public void reparerPhone_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {

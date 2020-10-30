@@ -23,7 +23,7 @@ namespace App_Gestion_reparation.UI
     public partial class Saisie : Window
     {
         private ReparationPhone reparationPhone;
-        public bool EditMode = false;
+        public bool EditMode = true;
         
 
         /**
@@ -40,15 +40,9 @@ namespace App_Gestion_reparation.UI
         public Saisie(ReparationPhone phone)
         {
             this.EditMode = true;
-
+        
             InitializeComponent();
 
-            if(EditMode == true)
-            {
-
-            this.reparationPhone = new ReparationPhone(nom.Text, prenom.Text, modeleTelephone.Text, vini.Text, email.Text, description.Text, status.Text, prix.Text);
-
-            }
             this.reparationPhone = phone;
             this.DataContext = reparationPhone;
         }
@@ -56,13 +50,24 @@ namespace App_Gestion_reparation.UI
 
         public void save_Click(object sender, RoutedEventArgs e)
         {
-            if(EditMode == false)
+            this.reparationPhone.Nom = nom.Text;
+            this.reparationPhone.ModelPhone =  modeleTelephone.Text;
+            this.reparationPhone.Mobil = vini.Text;
+            this.reparationPhone.Email = email.Text;
+            this.reparationPhone.Description = description.Text;
+            this.reparationPhone.Status = status.Text;
+            this.reparationPhone.PrixReparation = prix.Text;
+
+            if (EditMode == false)
             {
-                
-                this.reparationPhone = new ReparationPhone(nom.Text,prenom.Text,modeleTelephone.Text,vini.Text,email.Text, description.Text,status.Text,prix.Text);
                 ReparationPhoneAccess.InsertReparation(reparationPhone);
-                Business.ReparationPhones.Add(reparationPhone);
+                Business.ReparationPhones.Add(reparationPhone);                
             }
+            else
+            {
+                ReparationPhoneAccess.Modif(reparationPhone);
+            }
+           
         }
 
         private void fermer_Click(object sender, RoutedEventArgs e)
